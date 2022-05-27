@@ -75,7 +75,7 @@ contract StakingController is Ownable{
     function updateStakingPool() internal {
         uint256 length = pools.length;
         uint256 points = 0;
-        for (uint256 pid = 1; pid < length; ++pid) {
+        for (uint256 pid = 0; pid < length; ++pid) {
             points = points.add(pools[pid].allocPoint);
         }
         if (points != 0) {
